@@ -15,11 +15,11 @@ CHIP Mux {
 
     PARTS:
     // Put your code here:
-Not(in=sel,out=notsel);
+Not(in=sel,out=selBar);
 
-And(a=b,b=notsel,out=w3);
+And(a=b,b=selBar,out=out1);
 
-And(a=a,b=sel,out=w4);
+And(a=a,b=sel,out=out2);
 
-Or(a=w3,b=w4,out=out);
+Or(a=out1,b=out2,out=out);
 }
